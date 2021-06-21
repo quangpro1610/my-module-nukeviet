@@ -166,7 +166,8 @@ function ket_qua($data, $subject, $years, $current, $city_code, $radio_val)
         }
         $xtpl->parse('main.show_top100');
     } else {
-        $xtpl->assign('VENDOR_KENDO', NV_STATIC_URL . NV_ASSETS_DIR . '/' . $module_file . '/kendo');
+        //Update NV_BASE_SITEURL for NV_STATIC_URL ( ver < 4.4)
+        $xtpl->assign('VENDOR_KENDO', NV_BASE_SITEURL . NV_ASSETS_DIR . '/' . $module_file . '/kendo');
         $xtpl->assign('DATA', $data);
         $xtpl->assign('SUBJECT', $subject);
         $xtpl->parse('main.show_pho_diem');
