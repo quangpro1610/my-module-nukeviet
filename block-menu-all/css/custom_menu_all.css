@@ -1,0 +1,93 @@
+.custom_menu_all {
+    position: relative;
+    height: 50px;
+}
+.bton-toggle {
+    color: #dcdcdc;
+    border-color: #428bca;
+    background-color: #428bca;
+    padding: 9px 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.bton-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #fff;
+}
+.bton-toggle .icon-bar+.icon-bar {
+    margin-top: 4px;
+}
+.mobile-menu-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: none;
+}
+.custom_menu_all .show_menu {
+    width: 70%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: #fff;
+    visibility: hidden;
+    transform: translateX(100%);
+    padding-left: 0;
+    z-index: 10000;
+}
+.custom_menu_all .show_menu.animate {
+    transition: all 0.5s ease;
+}
+.custom_menu_all .show_menu li a{
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+}
+.custom_menu_all .show_menu li.current > a,
+.custom_menu_all .show_menu li a:hover, 
+.custom_menu_all .show_menu li a:focus, 
+.custom_menu_all .show_menu li.current {
+    color: #fff;
+    background-color: #063b70;
+}
+.custom_menu_all .sub_menu {
+    display: none;
+}
+.custom_menu_all .show_menu ul {
+    padding-left: 0;
+    background-color: #428bca;
+}
+.custom_menu_all .show_menu ul li a{
+    padding-left: 40px;
+    border-top: 1px solid #82b2dc;
+}
+.custom_menu_all .show_menu>li>div {
+    background-color: #428bca;
+    border-top: 1px solid #82b2dc;
+}
+.custom_menu_all .show_menu>li>div>a {
+    width: calc(100% - 35px);
+}
+.custom_menu_all .show_menu>li>div>span {
+    padding: 10px 12px;
+    font-size: 16px;
+    color: #fff;
+    margin-left: 0;
+}
+@media (max-width: 768px) {
+    .open-menu .mobile-menu-bg {
+        display: block;
+    }
+    .open-menu .custom_menu_all .show_menu {
+        visibility: visible;
+        transform: translateX(0px);
+        overflow: auto;
+    }
+}
